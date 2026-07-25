@@ -57,7 +57,7 @@ cd Filesystem-Filter
 # Make the script executable and move it to your system PATH (or ~/.local/bin)
 chmod +x filesystem_filter.sh
 sudo mv filesystem_filter.sh /usr/local/bin/filesystem_filter
-sudo ln -s /usr/local/bin/filesystem_filter /usr/local/bin/fsfltr
+sudo ln -sf /usr/local/bin/filesystem_filter /usr/local/bin/fsfltr
 ```
 
 ---
