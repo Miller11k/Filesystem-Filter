@@ -43,7 +43,7 @@ ln -s ~/.local/bin/filesystem_filter ~/.local/bin/fsfltr
 Installs globally into `/usr/local/bin` (requires root privileges):
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/Miller11k/Filesystem-Filter/main/install.sh | sh -s -- --system
+curl -fsSL https://raw.githubusercontent.com/Miller11k/Filesystem-Filter/main/install.sh | sudo sh -s -- --system
 ```
 
 #### Manual Install Using `git clone`
