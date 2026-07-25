@@ -18,7 +18,7 @@ You can install `filesystem_filter.sh` using either **User Mode** (default, no r
 #### Automatic Install Using `curl`
 Installs into your local user directory (`~/.local/bin`) without requiring root privileges:
 ```bash
-curl -fsSL [https://raw.githubusercontent.com/Miller11k/Filesystem-Filter/main/install.sh](https://raw.githubusercontent.com/Miller11k/Filesystem-Filter/main/install.sh) | sh
+curl -fsSL https://raw.githubusercontent.com/Miller11k/Filesystem-Filter/main/install.sh | sh
 ```
 
 *(If prompted about your `PATH`, ensure `~/.local/bin` is added to your shell profile).*
@@ -28,7 +28,7 @@ If you prefer to set it up manually:
 
 ```bash
 # Clone the repository
-git clone [https://github.com/Miller11k/Filesystem-Filter.git](https://github.com/Miller11k/Filesystem-Filter.git)
+git clone https://github.com/Miller11k/Filesystem-Filter.git
 cd Filesystem-Filter
 
 # Make the script executable and move it to your system PATH (or ~/.local/bin)
@@ -43,7 +43,7 @@ ln -s ~/.local/bin/filesystem_filter ~/.local/bin/fsfltr
 Installs globally into `/usr/local/bin` (requires root privileges):
 
 ```bash
-curl -fsSL [https://raw.githubusercontent.com/Miller11k/Filesystem-Filter/main/install.sh](https://raw.githubusercontent.com/Miller11k/Filesystem-Filter/main/install.sh) | sh -s -- --system
+curl -fsSL https://raw.githubusercontent.com/Miller11k/Filesystem-Filter/main/install.sh | sh -s -- --system
 ```
 
 #### Manual Install Using `git clone`
@@ -51,7 +51,7 @@ If you prefer to set it up manually:
 
 ```bash
 # Clone the repository
-git clone [https://github.com/Miller11k/Filesystem-Filter.git](https://github.com/Miller11k/Filesystem-Filter.git)
+git clone https://github.com/Miller11k/Filesystem-Filter.git
 cd Filesystem-Filter
 
 # Make the script executable and move it to your system PATH (or ~/.local/bin)
