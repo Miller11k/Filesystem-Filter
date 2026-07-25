@@ -1,0 +1,102 @@
+# ==========================================
+# SENSITIVE DATA & SECRETS (Highest Priority)
+# ==========================================
+# Local environment variables and secrets
+.env
+.env.*
+!.env.example
+secrets/
+*.pem
+*.key
+*.crt
+*.pfx
+*.pub
+*_rsa
+*_ed25519
+
+# Vault / AWS / Cloud credentials accidentally created locally
+.aws/
+.gcp/
+.azure/
+.vault-token
+
+# ==========================================
+# BASH / SHELL SPECIFIC & RUNTIME
+# ==========================================
+# Shell history and session logs
+.bash_history
+.zsh_history
+*.log
+logs/
+
+# Test output directories & temp script run artifacts
+/tmp/
+/out/
+/dist/
+/build/
+*.tmp
+*.temp
+*.bak
+
+# Shellcheck / linter cache
+.shellcheckrc_cache/
+.bats_cache/
+
+# ==========================================
+# OPERATING SYSTEM JUNK
+# ==========================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+[Dd]esktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+
+# ==========================================
+# EDITORS & IDE CONFIGURATIONS
+# ==========================================
+# Vim / Neovim
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+.*.un~
+Session.vim
+
+# VS Code (uncomment .vscode/ if you prefer to keep workspace settings local)
+.vscode/*.log
+# .vscode/
+
+# JetBrains (PyCharm, CLion, WebStorm, etc.)
+.idea/
+*.iws
+*.iml
+
+# Emacs
+#*#
+.#*
+
+# ==========================================
+# TOOLING & PIPELINES (Optional CLI Helpers)
+# ==========================================
+# If you run Docker / Vagrant locally during script testing
+.vagrant/
+.docker/
+
+# Direnv (common for auto-loading shell environment variables)
+.direnv/
+.envrc
