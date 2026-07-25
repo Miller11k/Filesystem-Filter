@@ -224,16 +224,18 @@ do_delete() {
     while IFS= read -r -d '' path; do   # Iterate through all entries
       matches+=("$path")                # Add path to match array
     done < <(
-      # Search TARGET (DEPTH_ARGS adds -maxdepth 1 when non-recursive)
-      find "$TARGET" "${DEPTH_ARGS[@]}" \
-          # Restrict to files ('f') or directories ('d') as set earlier
-          -type "$ftype" \
-          # Use the expressions set earlier
-          \( "${expr[@]}" \) \
-          # NUL-delimit output so filenames (spaces/newlines survive intact)
-          -print0 \
-          2>/dev/null   # Suppress errors so one bad path doesn't break everything
-    )
+        # Search TARGET, restrict to files/dirs, apply name expressions, and NUL-delimit output:
+        #   - DEPTH_ARGS adds -maxdepth 1 when non-recursive
+        #   - -type "$ftype" restricts to files ('f') or directories ('d')
+        #   - \( "${expr[@]}" \) matches your selected glob patterns
+        #   - -print0 ensures spaces/newlines in filenames survive intact
+        #   - 2>/dev/null suppresses errors so one bad path doesn't break everything
+        find "$TARGET" "${DEPTH_ARGS[@]}" \
+            -type "$ftype" \
+            \( "${expr[@]}" \) \
+            -print0 \
+            2>/dev/null
+      )
 
   [[ ${#matches[@]} -eq 0 ]] && return 0  # Return early if nothing matches (print nothing)
 
